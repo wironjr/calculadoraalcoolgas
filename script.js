@@ -16,6 +16,7 @@ function teste(event){
 
     if((gasolinaInput == "") || (alcoolInput == "")){
         msgVerificaAlcool.classList.remove("hide")
+        resultCard.classList.add("hide")
     }else{
         if (result > 0.7) {
        
@@ -28,8 +29,8 @@ function teste(event){
         msgVerificaAlcool.classList.add("hide")
     }
 
-    textGasolina.innerHTML = "Valor da gasolina R$ " + gasolinaInput
-    textAlcool.innerHTML = "Valor do álcool R$ " + alcoolInput
+    textGasolina.innerHTML = "Valor da gasolina R$ " + gasolinaInput.replace(".", ",")
+    textAlcool.innerHTML = "Valor do álcool R$ " + alcoolInput.replace(".", ",")
 
    
 }
